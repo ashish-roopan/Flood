@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+  <header>{% block head %}{% endblock %}</header>
+  {% block body %}{% endblock %}
+</body>
+</html>
+
+
+{% block content %}
+
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.shelter_btn(class="btn btn-outline-info") }}
+            </div>
+            <div class="form-group">
+                {{ form.house_btn(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
